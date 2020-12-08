@@ -1,6 +1,8 @@
 import logging
 
-logging.basicConfig(format='%(levelname)s: %(name)s::%(funcName)s : %(message)s')
+LOGGING_FORMAT = '%(levelname)s: %(name)s::%(funcName)s : %(message)s'
+
+logging.basicConfig(format=LOGGING_FORMAT)
 
 
 def get_logger(name):
