@@ -12,13 +12,16 @@ class Base:
         self._pybase_logger_name = pybase_logger_name
 
         self._valid = True
-        self._log = get_logger(self._pybase_get_logger_name())
+        self._log = self._get_logger(self._pybase_get_logger_name())
 
     def instance_valid(self):
         return self._valid
 
     def _pybase_get_logger_name(self):
         return self._pybase_logger_name
+
+    def _get_logger(self, name):
+        return get_logger(name)
 
     def __str__(self):
         return self._pybase_get_logger_name()
