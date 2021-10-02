@@ -8,6 +8,10 @@ def is_number(n):
     return isinstance(n, numbers.Number)
 
 
+def is_mapping(d):
+    return isinstance(d, collections.Mapping)
+
+
 def is_dict(d):
     return isinstance(d, dict)
 
@@ -15,12 +19,14 @@ def is_dict(d):
 def is_bool(d):
     return isinstance(d, bool)
 
+
 def is_class(c):
     return isinstance(c, type)
 
 
 def is_sequence(l):
     return isinstance(l, collections.Sequence)
+
 
 def is_non_empty_string(s):
     return isinstance(s, str) and len(s) > 0
