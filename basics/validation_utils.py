@@ -1,6 +1,5 @@
 import os
-import types
-import collections
+from collections.abc import Mapping, Sequence
 import numbers
 
 
@@ -9,7 +8,7 @@ def is_number(n):
 
 
 def is_mapping(d):
-    return isinstance(d, collections.Mapping)
+    return isinstance(d, Mapping)
 
 
 def is_dict(d):
@@ -25,7 +24,7 @@ def is_class(c):
 
 
 def is_sequence(l):
-    return isinstance(l, collections.Sequence)
+    return isinstance(l, Sequence)
 
 
 def is_non_empty_string(s):
